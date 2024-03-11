@@ -1,0 +1,12 @@
+Answer 1 :
+Based on the image you sent, the relationship between the "Product" and "Product_Category" entities is one-to-many. 
+This means that one product can belong to one category,but a category can have many products.
+
+
+
+Answer 2: Here's how we can ensure that each product in the "Product" table has a valid category assigned to it:
+Not Null Constraint: We can add a NOT NULL constraint on the category.id column in the "Product" table. This will prevent products from being inserted without a valid category ID.
+Foreign Key Constraint: You can create a foreign key constraint on the category.id column in the "Product" table.
+
+This foreign key will reference the primary key (id) of the "Product_Category" table.
+This will ensure that the category ID assigned to a product actually exists in the "Product_Category" table.
